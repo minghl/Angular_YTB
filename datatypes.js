@@ -1,0 +1,14 @@
+"use strict";
+// let lname = 'John';
+let lname;
+lname = 'John';
+let newnam = lname.toUpperCase();
+console.log(newnam);
+let age;
+age = 25;
+age = 25.5;
+let dob = '25';
+let restul = parseInt(dob);
+let isValid = false;
+console.log(isValid);
+// lname = 10;
