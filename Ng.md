@@ -94,5 +94,12 @@
 - Required Parameters
 - Rest Parameters 
 
+# 5. Classes
 
-
+- Introduction to Classes
+- Creating Classes
+- Class Properties and constructor
+- Class methods
+- Creating Instance of Class
+- Member Visibility
+- Static Members
