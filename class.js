@@ -11,10 +11,12 @@ var __classPrivateFieldSet = (this && this.__classPrivateFieldSet) || function (
     return (kind === "a" ? f.call(receiver, value) : f ? f.value = value : state.set(receiver, value)), value;
 };
 var _Employee_id;
+Object.defineProperty(exports, "__esModule", { value: true });
 class Employee {
     static getEmployeeCount() {
         return 50;
     }
+    // for private use
     get empId() {
         return __classPrivateFieldGet(this, _Employee_id, "f");
     }
@@ -30,6 +32,9 @@ class Employee {
         __classPrivateFieldSet(this, _Employee_id, id, "f");
         this.name = name;
     }
+    login() {
+        return { name: 'John', id: 1, email: '' };
+    }
     getNameWithAddress() {
         return `${this.name} stays at ${this.address}`;
     }
@@ -44,9 +49,10 @@ class Manager extends Employee {
         return `${this.name} is a manager at ${this.address}`;
     }
 }
-let john = new Employee(1, 'John', 'Highway 71');
+let john = new Employee(1, 'John', { street: 'ABC', city: 'Bangalore', state: 'Karnataka', pin: '560076' });
 // 函数原型可以call static方法，实例不行
 // Employee.getEmployeeCount();
+// set get function to get the private members
 john.empId = 100;
 console.log(john.empId);
 let address = john.getNameWithAddress();
@@ -55,5 +61,5 @@ let address = john.getNameWithAddress();
 // john.address = "Highway 71";
 // console.log(john);
 console.log(address);
-let mike = new Manager(2, 'Mike', ' Cherise Drive');
-console.log(mike.getNameWithAddress());
+// let mike = new Manager(2, 'Mike', ' Cherise Drive');
+// console.log(mike.getNameWithAddress());

@@ -1,4 +1,13 @@
-class Employee {
+// import { Login, User} from './interface'
+import *  as UserLogin from './interface';
+
+interface Address{
+    street: string;
+    city: string;
+    state: string;
+    pin: string;
+}
+class Employee implements UserLogin.Login{
     // ! exclamation mark
     // ts grammer
     // # == private
@@ -6,7 +15,8 @@ class Employee {
 
     protected name: string;
 
-    address: string;
+    // 接口是类型，interface is type
+    address: Address;
 
     static getEmployeeCount(): number {
         return 50;
@@ -20,10 +30,13 @@ class Employee {
     set empId(id: number) {
         this.#id = id;
     }
-    constructor(id: number, name: string, address: string) {
+    constructor(id: number, name: string, address: Address) {
         this.address = address;
         this.#id = id;
         this.name = name;
+    }
+    login(): UserLogin.User {
+        return {name: 'John', id: 1, email: ''}
     }
 
     getNameWithAddress(): string{
@@ -32,7 +45,7 @@ class Employee {
 }
 
 class Manager extends Employee {
-    constructor(id: number, name: string, address: string) {
+    constructor(id: number, name: string, address: Address) {
         super(id, name, address);
     }
 
@@ -41,7 +54,7 @@ class Manager extends Employee {
         return `${this.name} is a manager at ${this.address}`;
     }
 }
-let john = new Employee(1, 'John', 'Highway 71');
+let john = new Employee(1, 'John', {street:'ABC', city:'Bangalore', state:'Karnataka',pin:'560076'});
 
 // 函数原型可以call static方法，实例不行
 // Employee.getEmployeeCount();
@@ -60,6 +73,6 @@ let address = john.getNameWithAddress();
 // console.log(john);
 console.log(address);
 
-let mike = new Manager(2, 'Mike', ' Cherise Drive');
+// let mike = new Manager(2, 'Mike', ' Cherise Drive');
 
-console.log(mike.getNameWithAddress());
+// console.log(mike.getNameWithAddress());

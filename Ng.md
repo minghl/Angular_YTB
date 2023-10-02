@@ -103,3 +103,13 @@
 - Creating Instance of Class
 - Member Visibility
 - Static Members
+
+# 6. Interfaces
+
+- Creating Interfaces
+- Using Interfaces as Types
+- Implementing Interfaces
+- Extending Interfaces
+- Optional Properties
+- Object destructuring
+- Array destructuring
