@@ -113,3 +113,12 @@
 - Optional Properties
 - Object destructuring
 - Array destructuring
+
+Interface is not in js, cannot be build. So in backend should use classes
+
+# 7. Decorators 
+
+- Introduction to decorators
+- Class Decorators
+- Method Decorators
+

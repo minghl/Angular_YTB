@@ -42,3 +42,11 @@ let [user1,user2,...restUsers]: User[] = [
 console.log(user1);
 console.log(user2);
 console.log(restUsers);
+
+// Change the behaviour of class at runtime once they are executed
+// @Component({})
+class Component{
+    constructor(public name: string){
+
+    }
+}
