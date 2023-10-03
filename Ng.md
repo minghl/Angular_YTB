@@ -122,3 +122,63 @@ Interface is not in js, cannot be build. So in backend should use classes
 - Class Decorators
 - Method Decorators
 
+# 8. ESModule
+
+- Introduction to ESModules
+- Import/Export
+- Compiling Typescript to different JS version
+
+outDir: './dist', generate dist dir
+ "sourceMap": true,  generate the file to find the compile file where from
+noEmit:true
+
+typescript cannot stop the compliing only give you the warning
+
+# 9. Angular
+
+## 01. setup and installation
+
+- Installing Angular CLI
+
+  - npm i @angular/cli -g OR 
+    Use npc to avoid having global version
+
+- Create new empty workspace using CLI 
+
+  - ng new hotelinventoryapp --create-application=false OR
+
+    ng new hotelinventoryapp
+
+- Create a workspace with default app
+
+  - ng new appname
+
+- Workspace walkthrough
+
+  - src/
+  - node_modules
+  - package.json
+  - package.lock.json
+    - CI env
+  - tsconfig.app.json
+    - Application
+  - tsconfig.json
+    - ts configuration file
+  - tsconfig.spec.json
+    - Unit test 
+  - angular.json
+    - workspace information
+  - karma.conf.json
+    - Karma test
+  - .editconfig
+    - Set up env local editor
+
+- Introduction to mono-repo
+
+  - Create and maintain multiple apps in same repo
+  - Use libraries within the project
+  - Deploy multiple apps/libs from same repo
+  - Easy to share code within the project
+
+
+

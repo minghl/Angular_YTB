@@ -20,3 +20,11 @@ let [user1, user2, ...restUsers] = [
 console.log(user1);
 console.log(user2);
 console.log(restUsers);
+// Change the behaviour of class at runtime once they are executed
+// @Component({})
+class Component {
+    constructor(name) {
+        this.name = name;
+    }
+}
+//# sourceMappingURL=interface.js.map
