@@ -180,5 +180,26 @@ typescript cannot stop the compliing only give you the warning
   - Deploy multiple apps/libs from same repo
   - Easy to share code within the project
 
+```
+ng serve -o  
+```
 
+Any components, directives and pipes need to be registered by declarations array
 
+## 02 Template Syntax
+
+```
+// create ng component
+ng g c componentname
+```
+
+- Component Introduction
+- Creating for your first component
+  - Components are building block on Angular Applications.
+  - Component consists a HTML template, Typescript class and CSS styles.
+- Binding syntax
+  - Interpolation
+  - Property Binding
+  - Event Binding
+
+command+P -> move to any file

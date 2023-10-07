@@ -20,8 +20,8 @@
     "module": "ES2022",
     "useDefineForClassFields": false,
     "lib": [
+      "dom",
       "ES2022",
-      "dom"
     ]
   },
   "angularCompilerOptions": {
