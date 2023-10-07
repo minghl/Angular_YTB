@@ -136,7 +136,7 @@ typescript cannot stop the compliing only give you the warning
 
 # 9. Angular
 
-## 01. setup and installation
+## 01 setup and installation
 
 - Installing Angular CLI
 
@@ -242,6 +242,43 @@ command+P -> move to any file
 ## 05 Bootrap
 
 ```
-
+ng add ngx-bootstrap
 ```
 
+# 10. Lifecycle
+
+## 01 Lifecycle Hooks
+
+- Introduction
+  - Component instance has lifecycle hooks which can help you to hook into different events on Components
+  - Lifecycle ends when component is destroyed
+- Lifecycle hooks
+  - ngOnChanges
+    - immutability/ state/ new instance
+    - Only can be put in component or directive
+  - ngOnInit
+    - after constructor finished, then call the ngOnInit 
+      - constructor:
+        - to inject some services
+        - not any blocking code
+      - ngOnInit:
+        - write logic
+        - Property declaration
+        - Load data from api and display that data on the view
+  - ngDoCheck
+  - ngAfterContentInit
+  - ngAfterContentChecked
+  - ngAfterViewInit
+  - ngAfterViewChecked
+  - ngOnDestroy
+
+## 02 Component Communication
+
+- Introduction
+  - The scenario where two or more components needs to interact is known as component communication
+  - There are multiple ways to achieve the component communication
+    - Using @Input and @Output
+      - smart component/ dump component; parent/child
+    - Using @ViewChild and @ContentChild
+    - Using services
+- Ways for Component Communication
