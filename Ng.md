@@ -203,3 +203,22 @@ ng g c componentname
   - Event Binding
 
 command+P -> move to any file
+
+## 03 Built-in Directives
+
+- Introduction
+  - Directives are use to change the behavior and appearance of DOM element
+    - Reusable function which you can apply on any dom element which you have in your application/ appearence of dom
+  - Directives can implement all lifecycle hooks
+  - Directives can not have template
+- Types of Directives
+  - Structure Directives
+  - Attribute Directives
+- Built-in Directives
+  - *ngIf
+  - *ngFor
+    - With * structure directive - can modify entire dom
+  - *ngSwitch
+  - ngClass
+    - Without * attribute directive - can modify dom cannot add/remove element from the dom
+  - ngStyle
