@@ -222,3 +222,19 @@ command+P -> move to any file
   - ngClass
     - Without * attribute directive - can modify dom cannot add/remove element from the dom
   - ngStyle
+
+## 04 Built-in Pipes
+
+- Introduction
+  - Pipes are used for data transformation
+  - Pipes don't change actual object
+- Built-in Pipes
+  - DatePipe
+  - UpperCasePipe
+  - LowerCasePipe
+  - Currency Pipe
+  - DecimalPipe
+  - PercentPipe
+  - JsonPipe
+  - SlicePipe
+  - AsyncPipe

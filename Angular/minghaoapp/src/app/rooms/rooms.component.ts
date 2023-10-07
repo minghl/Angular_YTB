@@ -27,7 +27,8 @@ export class RoomsComponent {
     price: 500,
     photos: 'https://images.unsplash.com/photo-1518791841217-8f162f11131',
     checkinTime: new Date('11-Nov-2023') ,
-    checkoutTime: new Date('14-Nov-2023')
+    checkoutTime: new Date('14-Nov-2023'),
+    rating: 4.5,
   },
     {
       roomNumber:2,
@@ -36,7 +37,8 @@ export class RoomsComponent {
     price: 1000,
     photos: 'https://images.unsplash.com/photo-1518791841217-8f162f11131',
     checkinTime: new Date('11-Nov-2023') ,
-    checkoutTime: new Date('14-Nov-2023')
+    checkoutTime: new Date('14-Nov-2023'),
+    rating: 3.45242,
   },
     {
       roomNumber:3,
@@ -45,7 +47,8 @@ export class RoomsComponent {
     price: 15500,
     photos: 'https://images.unsplash.com/photo-1518791841217-8f162f11131',
     checkinTime: new Date('11-Nov-2023') ,
-    checkoutTime: new Date('14-Nov-2023')
+    checkoutTime: new Date('14-Nov-2023'),
+    rating: 2.6,
   },
 
 ]
