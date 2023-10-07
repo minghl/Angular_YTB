@@ -238,3 +238,10 @@ command+P -> move to any file
   - JsonPipe
   - SlicePipe
   - AsyncPipe
+
+## 05 Bootrap
+
+```
+
+```
+
