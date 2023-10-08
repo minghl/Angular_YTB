@@ -318,3 +318,9 @@ ng add ngx-bootstrap
 - Dependency Resolution
 
 <img src="/Users/liminghao/Library/Application Support/typora-user-images/image-20231008174142271.png" alt="image-20231008174142271" style="zoom:50%;" />
+
+- Resolution Modifiers
+  - Self 
+  - SkipSelf
+  - Optional
+  - Host
