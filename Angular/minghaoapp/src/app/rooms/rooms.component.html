@@ -1,5 +1,6 @@
-<h1>Welcome to {{ hotelName }}</h1>
+<!-- <h1>Welcome to {{ hotelName }}</h1> -->
 
+<mhdev-header></mhdev-header>
 <div [hidden]="hideRooms">
   Number of rooms:
   <div
@@ -17,11 +18,11 @@
   <button (click)="addRoom()">Add Room</button>
 </div>
 
-<div *ngIf="rooms.availableRooms > 0">
+<div *ngIf="hideRooms">
   <!-- $event must from child component -->
   <mhdev-rooms-list
     [rooms]="roomList"
-    [title]="'Room List'"
+    [title]="title"
     (selectedRoom)="selectRoom($event)"
   ></mhdev-rooms-list>
 </div>

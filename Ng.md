@@ -256,6 +256,7 @@ ng add ngx-bootstrap
   - ngOnChanges
     - immutability/ state/ new instance
     - Only can be put in component or directive
+    - Waste not usually used, it is costly 
   - ngOnInit
     - after constructor finished, then call the ngOnInit 
       - constructor:
@@ -266,11 +267,20 @@ ng add ngx-bootstrap
         - Property declaration
         - Load data from api and display that data on the view
   - ngDoCheck
+    - not use with onchange , it is the same effect, avoid use onchange, use docheck
   - ngAfterContentInit
+    - Content should be provided by parent component
+    - Like view can replace input and output, but better use input and output
   - ngAfterContentChecked
   - ngAfterViewInit
+    - ViewChild three ways:
+      - Access the component instance using view child: access header component and create a new instance using ts (static property)
+      - View containter ref to dynamically load a component 
+      - access a html element using template reference to assign some property
   - ngAfterViewChecked
   - ngOnDestroy
+    - A component is get removed from dom - ondestroy will be called
+    - memory consuming can be used here - unsubscribe
 
 ## 02 Component Communication
 

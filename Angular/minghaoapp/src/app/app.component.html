@@ -1,8 +1,21 @@
 <h1>Hello World</h1>
+<!-- <mhdev-rooms></mhdev-rooms> -->
 
+<mhdev-container>
+  <mhdev-rooms></mhdev-rooms>
+  <mhdev-employee></mhdev-employee>
+  <h1>This is from ng-content</h1>
+</mhdev-container>
+<div #name></div>
 <!-- ngSwitch -->
-<div [ngSwitch]="role">
+<!-- <div [ngSwitch]="role">
   <div *ngSwitchCase="'User'">Welcome User!</div>
   <div *ngSwitchCase="'Admin'"><mhdev-rooms></mhdev-rooms></div>
   <div *ngSwitchDefault>You are not authorized to view this page</div>
-</div>
+</div> -->
+<!-- a tag never render anything not visible -->
+<!-- # template reference -->
+<!-- <div>
+
+  <ng-template #user> </ng-template>
+</div> -->

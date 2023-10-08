@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { Room, RoomList } from './rooms';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'mhdev-rooms',
   templateUrl: './rooms.component.html',
   styleUrls: ['./rooms.component.scss']
 })
-export class RoomsComponent implements OnInit {
+export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewChecked {
   // interpolation
   hotelName = 'Hiton Hotel';
   numberOfRooms = 100;
@@ -19,13 +20,20 @@ export class RoomsComponent implements OnInit {
     bookedRooms: 5
   }
 
-  roomList: RoomList[] = []
+  title = 'Room List';
+  roomList: RoomList[] = [];
 
   selectedRoom!: RoomList;
 
-toggle(){
-  this.hideRooms = !this.hideRooms;
-}
+  toggle(){
+    this.hideRooms = !this.hideRooms;
+    this.title = 'Rooms List';
+  }
+  // static true itis safe to inside of its parent
+  @ViewChild(HeaderComponent) headerComponent!: HeaderComponent;
+
+  @ViewChildren(HeaderComponent) headerChildrenComponent!: QueryList<HeaderComponent>;
+
   constructor(){}
 
   ngOnInit(): void{
@@ -60,6 +68,22 @@ toggle(){
     rating: 2.6,
   },
   ]
+  }
+
+  ngDoCheck(): void {
+
+  }
+
+  ngAfterViewInit(): void {
+    this.headerComponent.title = 'Rooms View';
+
+    this.headerChildrenComponent.last.title = "Last Title";
+    // this.headerChildrenComponent.get()
+
+  }
+
+  ngAfterViewChecked(): void {
+
   }
 
   selectRoom(room:RoomList){
