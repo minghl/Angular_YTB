@@ -45,6 +45,5 @@ export class RoomsListComponent implements OnInit, DoCheck, OnDestroy{
 
   ngOnDestroy(): void {
     console.log('ondestroy');
-
   }
 }

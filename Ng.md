@@ -292,3 +292,29 @@ ng add ngx-bootstrap
     - Using @ViewChild and @ContentChild
     - Using services
 - Ways for Component Communication
+
+# 11. Dependency Injection (React Context)
+
+- Introduction
+  - Dependencies are service or objects needed by classes to perform some function
+  - It's a design pattern
+  - Angular has built-in Dependency Injection support (not like other frameworks)
+- DI Providers
+  - Class based providers
+  - Value providers
+  - Factory
+  - Provider Types
+    - root
+      - only one instance created, single instance
+      - if you don't want to create a single instance, register service inside that component
+    - any
+- Creating and consuming services
+  - ng g s <service-name>
+  - Injecting a service
+  - Consuming a service
+- Component Interaction using services
+  - Sharing data between multiple components
+  - Sharing data within App
+- Dependency Resolution
+
+<img src="/Users/liminghao/Library/Application Support/typora-user-images/image-20231008174142271.png" alt="image-20231008174142271" style="zoom:50%;" />
