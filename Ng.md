@@ -324,3 +324,20 @@ ng add ngx-bootstrap
   - SkipSelf
   - Optional
   - Host
+
+# 12. Angular Http and Observables
+
+- Introduction
+  - In enterpise apps, you need to interact with APIs
+  - You may be familiar with Ajax, fetch
+  - HttpClient is Service Provided by Angular to interact with APIs
+  - HttpClient internally uses RxJs
+- Setting Up HttpClient
+  - We need to import HttpClientModule
+  - Once module is imported we can inject HttpClient Service
+- Using HttpClient Service
+- Rxjs, Observables and streams
+- http methods
+- RxJs Operators
+- Http Interceptors
+- APP_INITIALIZERS

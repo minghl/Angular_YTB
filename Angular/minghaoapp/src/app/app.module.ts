@@ -18,12 +18,12 @@ import { APP_CONFIG, APP_SERVICE_CONFIG } from './AppConfig/appconfig.service';
     RoomsListComponent,
     HeaderComponent,
     ContainerComponent,
-    EmployeeComponent
+    EmployeeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
   providers: [{
     provide: APP_SERVICE_CONFIG,
