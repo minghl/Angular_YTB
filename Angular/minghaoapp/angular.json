@@ -68,7 +68,8 @@
               "browserTarget": "minghaoapp:build:production"
             },
             "development": {
-              "browserTarget": "minghaoapp:build:development"
+              "browserTarget": "minghaoapp:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

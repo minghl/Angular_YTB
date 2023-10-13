@@ -337,6 +337,13 @@ ng add ngx-bootstrap
   - Once module is imported we can inject HttpClient Service
 - Using HttpClient Service
 - Rxjs, Observables and streams
+  - Rxjs good observables library
+  - as dev, should subscribe to stream the data, continuous stream
+  - push versus pull architecture
+    - Pull based architecture
+      - getData -> addData -> getData
+    - Push based architecture
+      - getData -> continuous stream of data -> addData
 - http methods
 - RxJs Operators
 - Http Interceptors

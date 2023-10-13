@@ -1,4 +1,4 @@
-import { AfterViewChecked, AfterViewInit, Component, DoCheck, OnDestroy, OnInit, QueryList, SkipSelf, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, DoCheck, OnDestroy, OnInit, QueryList, SkipSelf, ViewChild, ViewChildren } from '@angular/core';
 import { Room, RoomList } from './rooms';
 import { HeaderComponent } from '../header/header.component';
 import { RoomsService } from './services/rooms.service';
@@ -42,10 +42,16 @@ export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewCh
 
   ngOnInit(): void{
     // private service
-    this.roomList = this.roomsService.getRooms();
+    // this.roomList = this.roomsService.getRooms();
+    this.roomsService.getRooms().subscribe(rooms=>{
+      this.roomList = rooms;
+    })
+    console.log('ngOnINit');
+
   }
 
   ngDoCheck(): void {
+    console.log('doChekc is loading');
 
   }
 
@@ -68,7 +74,7 @@ export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewCh
 
   addRoom(){
     const room: RoomList = {
-      roomNumber:4,
+      roomNumber:'4',
       roomType:'Private Suite',
       amenities:'Air Conditioner, Free Wi-Fi, TV, Bathroom, Kitchen',
       price: 1500,
@@ -85,3 +91,4 @@ export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewCh
   }
 
 }
+
