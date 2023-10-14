@@ -344,6 +344,10 @@ ng add ngx-bootstrap
       - getData -> addData -> getData
     - Push based architecture
       - getData -> continuous stream of data -> addData
+  - Rxjs and Observables
+    - RxJs is an library for writing Reactive Programming
+    - Observables are stream of data to which we can subscribe
+    - Using RxJs itself not http
 - http methods
 - RxJs Operators
 - Http Interceptors

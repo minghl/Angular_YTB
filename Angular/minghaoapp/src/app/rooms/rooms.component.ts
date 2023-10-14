@@ -2,6 +2,7 @@ import { AfterViewChecked, AfterViewInit, ChangeDetectorRef, Component, DoCheck,
 import { Room, RoomList } from './rooms';
 import { HeaderComponent } from '../header/header.component';
 import { RoomsService } from './services/rooms.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'mhdev-rooms',
@@ -24,6 +25,14 @@ export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewCh
   title = 'Room List';
   roomList: RoomList[] = [];
 
+  stream = new Observable(observer=>{
+    observer.next('user1');
+    observer.next('user2');
+    observer.next('user3');
+    observer.complete();
+    observer.error('error');
+  })
+
   selectedRoom!: RoomList;
 
   toggle(){
@@ -41,6 +50,14 @@ export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewCh
   }
 
   ngOnInit(): void{
+    this.stream.subscribe({
+      next:(value)=>console.log(value),
+      complete: ()=>console.log('complete'),
+      error:(error)=>console.log(error),
+
+
+    })
+    this.stream.subscribe((data)=>console.log(data))
     // private service
     // this.roomList = this.roomsService.getRooms();
     this.roomsService.getRooms().subscribe(rooms=>{
