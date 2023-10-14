@@ -352,6 +352,8 @@ ng add ngx-bootstrap
   - API Interaction
     - Performing CRUD operation using HttpClient
     - Error Handling
+  - http request
+    - dummy api
 - RxJs Operators
 - Http Interceptors
 - APP_INITIALIZERS

@@ -3,6 +3,7 @@ import { Room, RoomList } from './rooms';
 import { HeaderComponent } from '../header/header.component';
 import { RoomsService } from './services/rooms.service';
 import { Observable } from 'rxjs';
+import { HttpEventType } from '@angular/common/http';
 
 @Component({
   selector: 'mhdev-rooms',
@@ -14,7 +15,7 @@ export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewCh
   hotelName = 'Hiton Hotel';
   numberOfRooms = 100;
 
-  hideRooms = false;
+  hideRooms = true;
 
   rooms: Room  =  {
     totalRooms: 30,
@@ -24,6 +25,7 @@ export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewCh
 
   title = 'Room List';
   roomList: RoomList[] = [];
+
 
   stream = new Observable(observer=>{
     observer.next('user1');
@@ -35,6 +37,8 @@ export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewCh
 
   selectedRoom!: RoomList;
 
+
+
   toggle(){
     this.hideRooms = !this.hideRooms;
     this.title = 'Rooms List';
@@ -43,13 +47,35 @@ export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewCh
   @ViewChild(HeaderComponent) headerComponent!: HeaderComponent;
 
   @ViewChildren(HeaderComponent) headerChildrenComponent!: QueryList<HeaderComponent>;
-
+  totalBytes = 0;
   // roomService = new RoomsService();
   constructor(@SkipSelf() private roomsService: RoomsService){
 
   }
 
   ngOnInit(): void{
+
+    this.roomsService.getPhotos().subscribe((event)=>{
+      switch(event.type){
+        case HttpEventType.Sent:{
+          console.log('Request has been made!');
+          break;
+        }
+        case HttpEventType.ResponseHeader:{
+          console.log('Request success!');
+          break;
+        }
+        case HttpEventType.DownloadProgress:{
+          this.totalBytes += event.loaded;
+          break;
+        }
+        case HttpEventType.Response: {
+          console.log(event.body);
+          break;
+        }
+      }
+
+    })
     this.stream.subscribe({
       next:(value)=>console.log(value),
       complete: ()=>console.log('complete'),
