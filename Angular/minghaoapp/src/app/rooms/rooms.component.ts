@@ -91,7 +91,7 @@ export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewCh
 
   addRoom(){
     const room: RoomList = {
-      roomNumber:'4',
+      // roomNumber:'4',
       roomType:'Private Suite',
       amenities:'Air Conditioner, Free Wi-Fi, TV, Bathroom, Kitchen',
       price: 1500,
@@ -104,7 +104,32 @@ export class RoomsComponent implements OnInit,DoCheck,AfterViewInit, AfterViewCh
     // keep the origin data and add the new record
     // spread operator
     // using spread operator to make sure okay the existing data is already available in array and new record gets added
-    this.roomList = [...this.roomList, room];
+    // this.roomList = [...this.roomList, room];
+    this.roomsService.addRoom(room).subscribe((data)=>{
+      this.roomList = data;
+    })
+  }
+
+  editRoom(){
+    const room: RoomList = {
+      roomNumber:'3',
+      roomType:'Private Suite',
+      amenities:'Air Conditioner, Free Wi-Fi, TV, Bathroom, Kitchen',
+      price: 500,
+      photos: 'https://images.unsplash.com/photo-1518791841217-8f162f11131',
+      checkinTime: new Date('11-Nov-2023') ,
+      checkoutTime: new Date('14-Nov-2023'),
+      rating: 4.5,
+    }
+    this.roomsService.editRoom(room).subscribe((data)=>{
+      this.roomList = data;
+    });
+  }
+
+  deleteRoom(){
+    this.roomsService.delete('3').subscribe((data)=>{
+      this.roomList = data;
+    })
   }
 
 }

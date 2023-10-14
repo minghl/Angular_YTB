@@ -349,6 +349,9 @@ ng add ngx-bootstrap
     - Observables are stream of data to which we can subscribe
     - Using RxJs itself not http
 - http methods
+  - API Interaction
+    - Performing CRUD operation using HttpClient
+    - Error Handling
 - RxJs Operators
 - Http Interceptors
 - APP_INITIALIZERS
