@@ -332,10 +332,13 @@ ng add ngx-bootstrap
   - You may be familiar with Ajax, fetch
   - HttpClient is Service Provided by Angular to interact with APIs
   - HttpClient internally uses RxJs
+  
 - Setting Up HttpClient
   - We need to import HttpClientModule
   - Once module is imported we can inject HttpClient Service
+  
 - Using HttpClient Service
+
 - Rxjs, Observables and streams
   - Rxjs good observables library
   - as dev, should subscribe to stream the data, continuous stream
@@ -348,18 +351,45 @@ ng add ngx-bootstrap
     - RxJs is an library for writing Reactive Programming
     - Observables are stream of data to which we can subscribe
     - Using RxJs itself not http
+  
 - http methods
   - API Interaction
     - Performing CRUD operation using HttpClient
     - Error Handling
   - http request
     - dummy api
+  
 - RxJs Operators
+
   - ShareReplay
     - catch the request so dont have to make the call again, 减少相同request的发送次数
       - We cant modify the stream after we subscribe to it, stream can be modified inside a function that function is known as pipe, pipe can do anything to manipulate with your data
       - we are going to repeat or replay the last one record which we have received
   - CatchError
   - Map operators
+
 - Http Interceptors
+
 - APP_INITIALIZERS
+
+  
+
+  
+
+## Async pipe
+
+Make it possible to manage the subscription for us what in case I have to do it myself
+
+Async pipe will unwrap that object and it will give you the data
+
+Avoid multiple async pipes into same stream
+
+- DatePipe 
+- UpperCasePipe
+- LowerCasePipe
+- CurrencyPipe
+- DecimalPipe
+- PercentPipe
+- JsonPipe
+- SlicePipe
+- AsyncPipe

@@ -10,7 +10,7 @@ import { RoomList } from '../rooms';
 })
 export class RoomsListComponent implements OnInit, DoCheck, OnDestroy{
 // OnInit and OnChanges are interfaces
-  @Input()rooms: RoomList[]= [];
+  @Input()rooms: RoomList[]| null= [] ;
 
   @Input()title: string = '';
 
