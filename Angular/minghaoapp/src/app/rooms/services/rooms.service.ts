@@ -11,7 +11,7 @@ export class RoomsService {
   roomList: RoomList[] = []
 
   // getRooms is property and $ is stream
-  getRooms$ = this.http.get<RoomList[]>('/api/room').pipe(
+  getRooms$ = this.http.get<RoomList[]>('/api/rooms').pipe(
     shareReplay(1)
   )
 

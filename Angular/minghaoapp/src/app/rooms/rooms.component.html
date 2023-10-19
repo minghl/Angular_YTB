@@ -20,7 +20,9 @@
 </div>
 
 <h1>
-  {{ getError$ | async }}
+  <!-- {{ getError$ | async }} -->
+
+  Number of rooms: {{ roomsCount$ | async }}
 </h1>
 <div *ngIf="rooms$ | async as rooms">
   <!-- $event must from child component -->
