@@ -19,6 +19,9 @@
   <button (click)="addRoom()">Add Room</button>
 </div>
 
+<h1>
+  {{ getError$ | async }}
+</h1>
 <div *ngIf="rooms$ | async as rooms">
   <!-- $event must from child component -->
   <mhdev-rooms-list
