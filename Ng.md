@@ -320,7 +320,7 @@ ng add ngx-bootstrap
 <img src="/Users/liminghao/Library/Application Support/typora-user-images/image-20231008174142271.png" alt="image-20231008174142271" style="zoom:50%;" />
 
 - Resolution Modifiers
-  - Self 
+  - Self
   - SkipSelf
   - Optional
   - Host
@@ -355,5 +355,11 @@ ng add ngx-bootstrap
   - http request
     - dummy api
 - RxJs Operators
+  - ShareReplay
+    - catch the request so dont have to make the call again, 减少相同request的发送次数
+      - We cant modify the stream after we subscribe to it, stream can be modified inside a function that function is known as pipe, pipe can do anything to manipulate with your data
+      - we are going to repeat or replay the last one record which we have received
+  - CatchError
+  - Map operators
 - Http Interceptors
 - APP_INITIALIZERS
